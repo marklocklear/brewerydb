@@ -3,18 +3,19 @@
 In this tutorial I will show you how to retrieve data from an API,  and then save and retrieve that data from a [Firebase](https://www.firebase.com/) database. Now, we could come up with some contrived premise for creating data to store in our database, and boring old Lorem Ipsum simply will not do. Everyone loves beer, so we will search our favoriate breweries using [BreweryDB](http://www.brewerydb.com/) and write that data to our database. We will be using Ruby 1.9.3 or greater to write this script.
 
 We will be using the [brewery_db](https://github.com/tylerhunt/brewery_db) and [firebase](https://github.com/oscardelben/firebase-ruby) gems in this tutorial. The first thing we'll need to do is install the gems locally.
-<pre>
-    ruby-1.9.3-p551$ <b>gem install firebase</b>
-    Fetching: firebase-0.2.6.gem (100%)
-    Successfully installed firebase-0.2.6
-    Installing ri documentation for firebase-0.2.6
-    1 gem installed
-    ruby-1.9.3-p551$ <b>gem install brewery_db</b>
-    Fetching: brewery_db-0.2.4.gem (100%)
-    Successfully installed brewery_db-0.2.4
-    Installing ri documentation for brewery_db-0.2.4
-    1 gem installed
-<pre>
+
+```
+ruby-1.9.3-p551$ <b>gem install firebase</b>
+Fetching: firebase-0.2.6.gem (100%)
+Successfully installed firebase-0.2.6
+Installing ri documentation for firebase-0.2.6
+1 gem installed
+ruby-1.9.3-p551$ <b>gem install brewery_db</b>
+Fetching: brewery_db-0.2.4.gem (100%)
+Successfully installed brewery_db-0.2.4
+Installing ri documentation for brewery_db-0.2.4
+1 gem installed
+```
 
 Now let's create a new ruby script. The first thing we will want to do in the script is require these gems at the top.
 ```ruby
@@ -75,6 +76,7 @@ Urban Growler Brewing Company
 Big Rock Urban Brewery
 Urban Chestnut Brewing Company
 ```
+
 You should see something similar. Also, when quering data in ruby like this I like using `inspect` to look at the entire object being returned. You can do this by using `puts b.inspect` in your loop rather than `puts b.name`.
 
 
